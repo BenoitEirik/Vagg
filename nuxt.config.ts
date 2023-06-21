@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/supabase'],
+  modules: [
+    '@nuxtjs/supabase',
+    '@nuxtjs/i18n',
+  ],
   app: {
     head: {
       charset: 'utf-8',
@@ -13,5 +16,9 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/site.webmanifest' }
       ]
     }
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr']
   }
 })

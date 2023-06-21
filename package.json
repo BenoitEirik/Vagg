@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,6 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "8.0.0-beta.12",
     "@nuxtjs/supabase": "^0.3.7",
     "@types/node": "^18",
     "nuxt": "^3.5.2"
