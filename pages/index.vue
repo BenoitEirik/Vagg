@@ -1,7 +1,3 @@
-<script setup>
-const { locale } = useI18n();
-</script>
-
 <template>
   <div>
     <form>
@@ -10,6 +6,12 @@ const { locale } = useI18n();
         <option value="fr">fr</option>
       </select>
       <p>{{ $t("welcome") }}</p>
+      <p>{{ $t("description") }}</p>
     </form>
+    <NuxtLink to="/playground">Playground</NuxtLink>
   </div>
 </template>
+
+<script setup lang="ts">
+const { locale } = useI18n();
+</script>
