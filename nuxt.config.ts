@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
+    'nuxt-icon'
   ],
   app: {
     head: {
