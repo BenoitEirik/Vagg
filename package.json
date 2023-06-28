@@ -17,6 +17,7 @@
     "nuxt": "^3.5.2"
   },
   "dependencies": {
-    "nuxt-icon": "^0.4.1"
+    "nuxt-icon": "^0.4.1",
+    "v-offline": "^3.4.0"
   }
 }
