@@ -11,6 +11,9 @@ dependencies:
   v-offline:
     specifier: ^3.4.0
     version: 3.4.0(ping.js@0.3.0)(vue@3.3.4)
+  vue-country-flag-next:
+    specifier: ^2.3.2
+    version: 2.3.2(vue@3.3.4)
 
 devDependencies:
   '@nuxt/devtools':
@@ -6697,6 +6700,15 @@ packages:
     dependencies:
       ufo: 1.1.2
     dev: true
+
+  /vue-country-flag-next@2.3.2(vue@3.3.4):
+    resolution: {integrity: sha512-Lv12L1VTwlBgizpZ3xPEPO3zuIETaJmeSiPuLOWLLgu2EakwU/o72iKYiKcdZ6BXiSkfss+Ski5fDzjuxZ1DcA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /vue-demi@0.13.11(vue@3.3.4):
     resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}

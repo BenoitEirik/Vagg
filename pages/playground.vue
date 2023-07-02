@@ -21,6 +21,20 @@
   <VOffline ping-url="1.1.1.1" @detected-condition="(value: boolean) => online = value">
     I'm <strong>{{ online ? 'online' : 'offline' }}</strong>
   </VOffline>
+
+  <h2>Language selection with flag</h2>
+  <select v-model="locale" style="min-width: 100px;">
+    <option value="en">
+      <CountryFlag country="en" />
+      English
+    </option>
+    <option value="fr">
+      <CountryFlag country="fr" />
+      Fançais
+    </option>
+  </select>
+  <CountryFlag country="fr" />
+
 </div>
 </template>
 
