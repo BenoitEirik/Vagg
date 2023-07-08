@@ -4,6 +4,7 @@ import {
   defineConfig,
   presetIcons,
   presetUno,
+  presetTypography
 } from 'unocss'
 
 export default defineConfig({
@@ -21,6 +22,8 @@ export default defineConfig({
 
     // default theme preset
     presetThemeDefault(),
+
+    presetTypography(),
   ],
   include: [/.*\/anu-vue\.js(.*)?$/, './**/*.vue', './**/*.md'],
 })

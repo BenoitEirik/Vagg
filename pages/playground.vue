@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="prose p-4">
   <NuxtLink to="/">Back</NuxtLink>
   <h1>Playground</h1>
 
@@ -35,7 +35,7 @@
     </ASelect>
   </div>
 
-  <div class="flex p-2 gap-2">
+  <div class="flex py-2 gap-2">
     <ABtn icon="i-bx-dollar-circle">
       Primary
     </ABtn>
@@ -56,7 +56,7 @@
     </ABtn>
   </div>
 
-  <div class="flex p-2 gap-2">
+  <div class="flex py-2 gap-2">
     <ABtn variant="outline" icon="i-bx-dollar-circle">
       Primary
     </ABtn>
@@ -77,7 +77,7 @@
     </ABtn>
   </div>
 
-  <div class="flex p-2 gap-2">
+  <div class="flex py-2 gap-2">
     <ABtn variant="light" icon="i-bx-dollar-circle">
       Primary
     </ABtn>
