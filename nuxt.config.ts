@@ -5,7 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/supabase',
     '@nuxtjs/i18n',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@anu-vue/nuxt',
+    '@unocss/nuxt'
   ],
   app: {
     head: {
@@ -22,5 +24,19 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr']
+  },
+  anu: {
+    themes: {
+      light: {
+        colors: {
+          primary: '27, 50%, 32%',
+          secondary: '223, 26%, 21%',
+          success: '139, 35%, 47%',
+          info: '199, 84%, 48%',
+          warning: '34, 87%, 60%',
+          danger: '2, 93%, 64%'
+        },
+      },
+    },
   }
 })

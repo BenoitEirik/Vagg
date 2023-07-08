@@ -14,9 +14,11 @@
     "@nuxtjs/i18n": "8.0.0-beta.12",
     "@nuxtjs/supabase": "^0.3.7",
     "@types/node": "^18",
+    "@unocss/nuxt": "^0.53.4",
     "nuxt": "^3.5.2"
   },
   "dependencies": {
+    "@anu-vue/nuxt": "^0.15.2",
     "nuxt-icon": "^0.4.1",
     "v-offline": "^3.4.0",
     "vue-country-flag-next": "^2.3.2"

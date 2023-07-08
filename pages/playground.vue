@@ -35,6 +35,68 @@
   </select>
   <CountryFlag country="fr" />
 
+  <div class="flex p-2 gap-2">
+    <ABtn icon="i-bx-dollar-circle">
+      Primary
+    </ABtn>
+    <ABtn color="secondary" icon="i-bx-dollar-circle">
+      Secondary
+    </ABtn>
+    <ABtn color="success" icon="i-bx-dollar-circle">
+      Success
+    </ABtn>
+    <ABtn color="info" icon="i-bx-dollar-circle">
+      Info
+    </ABtn>
+    <ABtn color="warning" icon="i-bx-dollar-circle">
+      Warning
+    </ABtn>
+    <ABtn color="danger" icon="i-bx-dollar-circle">
+      Danger
+    </ABtn>
+  </div>
+
+  <div class="flex p-2 gap-2">
+    <ABtn variant="outline" icon="i-bx-dollar-circle">
+      Primary
+    </ABtn>
+    <ABtn color="secondary" variant="outline" icon="i-bx-dollar-circle">
+      Secondary
+    </ABtn>
+    <ABtn color="success" variant="outline" icon="i-bx-dollar-circle">
+      Success
+    </ABtn>
+    <ABtn color="info" variant="outline" icon="i-bx-dollar-circle">
+      Info
+    </ABtn>
+    <ABtn color="warning" variant="outline" icon="i-bx-dollar-circle">
+      Warning
+    </ABtn>
+    <ABtn color="danger" variant="outline" icon="i-bx-dollar-circle">
+      Danger
+    </ABtn>
+  </div>
+
+  <div class="flex p-2 gap-2">
+    <ABtn variant="light" icon="i-bx-dollar-circle">
+      Primary
+    </ABtn>
+    <ABtn color="secondary" variant="light" icon="i-bx-dollar-circle">
+      Secondary
+    </ABtn>
+    <ABtn color="success" variant="light" icon="i-bx-dollar-circle">
+      Success
+    </ABtn>
+    <ABtn color="info" variant="light" icon="i-bx-dollar-circle">
+      Info
+    </ABtn>
+    <ABtn color="warning" variant="light" icon="i-bx-dollar-circle">
+      Warning
+    </ABtn>
+    <ABtn color="danger" variant="light" icon="i-bx-dollar-circle">
+      Danger
+    </ABtn>
+  </div>
 </div>
 </template>
 
