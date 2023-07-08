@@ -22,18 +22,18 @@
     I'm <strong>{{ online ? 'online' : 'offline' }}</strong>
   </VOffline>
 
-  <h2>Language selection with flag</h2>
-  <select v-model="locale" style="min-width: 100px;">
-    <option value="en">
-      <CountryFlag country="en" />
-      English
-    </option>
-    <option value="fr">
-      <CountryFlag country="fr" />
-      Fançais
-    </option>
-  </select>
-  <CountryFlag country="fr" />
+  <div>
+    <h2>Language selection with flag</h2>
+    <ASelect v-model="locale" placeholder="Sélection de la langue" :options="languages">
+      <template #default="{ handleListItemClick }">
+        <AListItem v-for="language in languages" :key="JSON.stringify(language)"
+          @click="handleListItemClick(language.value)">
+          <div :class="language.icon" />
+          <span>{{ language.text }}</span>
+        </AListItem>
+      </template>
+    </ASelect>
+  </div>
 
   <div class="flex p-2 gap-2">
     <ABtn icon="i-bx-dollar-circle">
@@ -101,7 +101,10 @@
 </template>
 
 <script setup lang="ts">
-
 const { locale } = useI18n();
 const online = ref<boolean>(true);
+const languages = [
+  { text: 'Français', value: 'fr', icon: 'i-flag-gf-4x3' },
+  { text: 'English', value: 'en', icon: 'i-flag-gb-4x3' }
+];
 </script>

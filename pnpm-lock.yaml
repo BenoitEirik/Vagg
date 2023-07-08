@@ -17,11 +17,14 @@ dependencies:
   v-offline:
     specifier: ^3.4.0
     version: 3.4.0(ping.js@0.3.0)(vue@3.3.4)
-  vue-country-flag-next:
-    specifier: ^2.3.2
-    version: 2.3.2(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/flag':
+    specifier: ^1.1.32
+    version: 1.1.32
+  '@iconify-json/ph':
+    specifier: ^1.1.5
+    version: 1.1.5
   '@nuxt/devtools':
     specifier: latest
     version: 0.6.7(nuxt@3.5.2)(vite@4.3.9)
@@ -631,6 +634,18 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
+
+  /@iconify-json/flag@1.1.32:
+    resolution: {integrity: sha512-VvR2+7ThbHQZUkLFM7v3CPd9KzAvOVoFJEVG/6gSi3buB5XEH0Ca4ItBpDzEXvQ0zZ0DJgB0e6NX363CQM3n/g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ph@1.1.5:
+    resolution: {integrity: sha512-iLXq3nohfGge22gL2tZmQ2WHBKkKkIbGWrkuyC8arckS4PWaONyh4A+uDPtSek9QbYDvi9AE2+NxWkNZhANotA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -7474,15 +7489,6 @@ packages:
     dependencies:
       ufo: 1.1.2
     dev: true
-
-  /vue-country-flag-next@2.3.2(vue@3.3.4):
-    resolution: {integrity: sha512-Lv12L1VTwlBgizpZ3xPEPO3zuIETaJmeSiPuLOWLLgu2EakwU/o72iKYiKcdZ6BXiSkfss+Ski5fDzjuxZ1DcA==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.3.4
-    dev: false
 
   /vue-demi@0.13.11(vue@3.3.4):
     resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
