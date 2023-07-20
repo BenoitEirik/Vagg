@@ -1,5 +1,6 @@
 <template>
-<div class="sticky flex items-center drop-shadow-md border-b">
+<div class="z-50 top-0 sticky flex items-center drop-shadow-md border-b"
+  style="background-color: hsl(var(--a-body-bg-c));">
   <div class="p-4">
     <img src="/android-chrome-512x512.png" class="w-10">
   </div>

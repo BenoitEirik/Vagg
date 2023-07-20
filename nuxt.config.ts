@@ -36,8 +36,8 @@ export default defineNuxtConfig({
           info: '199, 84%, 48%',
           warning: '34, 87%, 60%',
           danger: '2, 93%, 64%'
-        },
-      },
-    },
+        }
+      }
+    }
   }
 })

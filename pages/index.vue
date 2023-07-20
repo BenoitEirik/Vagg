@@ -8,7 +8,14 @@
     <p>{{ $t("welcome") }}</p>
     <p>{{ $t("description") }}</p>
   </form>
-  <NuxtLink to="/playground">Playground</NuxtLink>
+  <div>
+    <NuxtLink to="/video">Video</NuxtLink>
+  </div>
+  <br>
+  <div>
+    <NuxtLink to="/playground">Playground</NuxtLink>
+  </div>
+
 </div>
 </template>
 

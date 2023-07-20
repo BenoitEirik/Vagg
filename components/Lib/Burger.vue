@@ -31,7 +31,7 @@ body {
 
 .line {
   fill: none;
-  stroke: black;
+  stroke: hsl(var(--a-primary));
   stroke-width: 6;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
