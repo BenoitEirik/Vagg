@@ -4,10 +4,21 @@
     <ASpinner class="spiner w-8" style="color: hsl(var(--a-primary));" />
   </div>
 
-  <div class="p-4 flex flex-wrap gap-2">
-    <ABtn icon="i-ph-book-bookmark" color="primary">
-      S'abonner
-    </ABtn>
+  <div class="p-4 flex flex-wrap gap-x-2 gap-y-4">
+    <div class="w-full flex gap-2 items-center">
+      <div class="flex gap-2 items-center flex-grow">
+        <AAvatar content="A" />
+        <div class="flex flex-col align-stretch">
+          <h2 class="text-lg">Titre de la chaîne</h2>
+          <p class="text-sm">1,61 M d'abonnées</p>
+        </div>
+      </div>
+      <div class="flex gap-2 items-center">
+        <ABtn icon="i-ph-book-bookmark" color="primary">
+          S'abonner
+        </ABtn>
+      </div>
+    </div>
     <ABtn icon="i-ph-share-network" color="primary" variant="light">
       Partager
     </ABtn>
