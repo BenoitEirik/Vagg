@@ -6,16 +6,20 @@
 
   <div class="p-4 flex flex-wrap gap-x-2 gap-y-4">
     <div class="w-full flex gap-2 items-center">
-      <div class="flex gap-2 items-center flex-grow">
+      <div class="flex gap-2 items-center flex-auto overflow-hidden">
         <AAvatar content="A" />
-        <div class="flex flex-col align-stretch">
-          <h2 class="text-lg">Titre de la chaîne</h2>
+        <div class="flex flex-col overflow-hidden">
+          <ATooltip text="Hello!">Titre de la chaîne, ellipse si texte trop
+            long</ATooltip>
+          <h2 class="text-lg truncate">Titre de la chaîne, ellipse si texte trop
+            long</h2>
           <p class="text-sm">1,61 M d'abonnées</p>
         </div>
       </div>
-      <div class="flex gap-2 items-center">
-        <ABtn icon="i-ph-book-bookmark" color="primary">
-          S'abonner
+      <div class="flex gap-2 items-center shrink-0 grow-0">
+        <ABtn icon="i-ph-plus" color="primary" :icon-only="!mq.sm ? true : false"
+          :class="{ 'rounded-[50%]': !mq.sm, 'rounded-2xl': mq.sm }">
+          {{ mq.sm ? 'S\'abonner' : '' }}
         </ABtn>
       </div>
     </div>
@@ -24,6 +28,9 @@
     </ABtn>
     <ABtn icon="i-ph-hand-heart" color="primary" variant="light">
       Intéressant
+    </ABtn>
+    <ABtn icon="i-ph-note-pencil" color="primary" variant="light">
+      Commenter
     </ABtn>
     <ASelect v-model="selectedCritic" prepend-inner-icon="i-bx-heart" :options="critics" placeholder="Feedback"
       class="text-sm" />
@@ -50,6 +57,8 @@
 </template>
 
 <script setup lang="ts">
+const mq = useMQ();
+
 const critics = [
   'Analyse approfondie',
   'Feedback technique',
