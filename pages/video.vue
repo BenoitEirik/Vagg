@@ -69,9 +69,9 @@
         </div>
       </div>
       <div class="flex gap-2 items-center shrink-0 grow-0">
-        <ABtn icon="i-ph-plus" color="primary" :icon-only="!mq.sm ? true : false"
-          :class="{ 'rounded-[50%]': !mq.sm, 'rounded-2xl': mq.sm }">
-          {{ mq.sm ? 'S\'abonner' : '' }}
+        <ABtn icon="i-ph-plus" color="primary" :icon-only="bk.smallerOrEqual('sm') ? true : false"
+          :class="{ 'rounded-[50%]': bk.smallerOrEqual('sm'), 'rounded-2xl': bk.greater('sm') }">
+          {{ bk.greater('sm') ? 'S\'abonner' : '' }}
         </ABtn>
       </div>
     </div>
@@ -93,7 +93,9 @@
 </template>
 
 <script setup lang="ts">
-const mq = useMQ()
+import { breakpointsTailwind } from '@vueuse/core'
+
+const bk = useBreakpoints(breakpointsTailwind)
 
 const critics = [
   'Analyse approfondie',

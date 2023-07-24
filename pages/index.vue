@@ -13,6 +13,10 @@
   </div>
   <br>
   <div>
+    <NuxtLink to="/account">Compte</NuxtLink>
+  </div>
+  <br>
+  <div>
     <NuxtLink to="/playground">Playground</NuxtLink>
   </div>
 
