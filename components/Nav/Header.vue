@@ -1,12 +1,11 @@
 <template>
-<div class="z-50 top-0 sticky flex items-center drop-shadow-md border-b"
-  style="background-color: hsl(var(--a-body-bg-c));">
-  <div class="p-4">
+<div class="z-50 top-0 sticky h-[60px] flex items-center border-b" style="backdrop-filter: blur(10px);">
+  <div class="px-4">
     <img src="/android-chrome-512x512.png" class="w-10">
   </div>
   <NuxtLink to="/" class="vagg-logo text-xl">Vagg</NuxtLink>
   <div class="grow-1 h-auto" />
-  <div class="p-4">
+  <div class="px-4">
     <LibBurger />
   </div>
 </div>
