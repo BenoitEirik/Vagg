@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@anu-vue/nuxt": "^0.15.2",
+    "nuxt-bus": "^0.9.3",
     "nuxt-icon": "^0.4.1",
     "sass": "^1.63.6",
     "v-offline": "^3.4.0",
