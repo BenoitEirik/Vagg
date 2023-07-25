@@ -7,7 +7,7 @@
 
   <div class="grow flex items-center" :class="{ 'justify-end': smAndSmaller, 'justify-center': !smAndSmaller }">
     <AInput v-if="!smAndSmaller" type="text" :placeholder="$t('Rechercher')" prepend-inner-icon="i-ph-magnifying-glass"
-      class="custom-search-box text-sm" @click="openSearchPage" />
+      class="false-search-box text-sm" @click="openSearchPage" />
     <ABtn v-else icon="i-ph-magnifying-glass" icon-only variant="text" @click="openSearchPage()" />
   </div>
 
@@ -36,7 +36,7 @@ const openSearchPage = () => {
   color: black;
 }
 
-.custom-search-box {
+.false-search-box {
   max-width: 400px;
 
   .a-base-input-input-wrapper {
