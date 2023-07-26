@@ -1,14 +1,23 @@
 <template>
 <div class="page flex items-stretch">
-  <div class="h-full border-r grow-0 shrink-0 flex flex-col items-end justify-between">
-    <ATabs :key="idTabs" :tabs="tabs" v-model="selectedTab" vertical class="grow" />
-    <div class="p-2 grow-0 flex flex-col gap-2 items-stretch">
-      <ABtn icon="i-ph-arrow-u-down-left" variant="outline" :icon-only="mdAndSmaller" class="">
-        {{ !mdAndSmaller ? 'Quitter' : '' }}
-      </ABtn>
-      <ABtn icon="i-ph-sign-out" variant="light" :icon-only="mdAndSmaller">
-        {{ !mdAndSmaller ? 'Déconnexion' : '' }}
-      </ABtn>
+  <div class="h-full border-r grow-0 shrink-0 flex flex-col justify-between">
+    <div class="py-5 flex flex-col gap-2 items-center">
+      <AAvatar class="m-1 flex justify-center rounded-[50%] outline outline-1 outline-offset-2 outline-dashed"
+        :class="{ 'text-sm': mdAndSmaller, 'text-3xl': !mdAndSmaller }" content="C" />
+      <h3 v-if="!mdAndSmaller">User Name</h3>
+    </div>
+    <div class="grow flex flex-col items-end">
+      <ATabs :key="idTabs" :tabs="tabs" v-model="selectedTab" vertical class="grow" />
+    </div>
+    <div class="grow-0 flex flex-col gap-2 items-stretch" :class="{ 'p-4': !mdAndSmaller, 'p-2': mdAndSmaller }">
+      <div class="flex items-center gap-2">
+        <ABtn icon="i-ph-arrow-u-down-left" variant="light" icon-only />
+        <span v-if="!mdAndSmaller">{{ $t('Quitter') }}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <ABtn icon="i-ph-sign-out" variant="light" icon-only />
+        <span v-if="!mdAndSmaller">{{ $t('Déconnexion') }}</span>
+      </div>
     </div>
   </div>
 

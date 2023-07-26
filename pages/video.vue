@@ -55,7 +55,7 @@
   <div class="p-4 flex flex-wrap gap-x-2 gap-y-4">
     <div class="w-full flex gap-2 items-center">
       <div class="flex gap-2 items-center flex-auto overflow-hidden">
-        <AAvatar content="A" />
+        <AAvatar content="A" class="m-1 outline outline-1 outline-offset-2 outline-dashed" />
         <div class="flex flex-col overflow-hidden">
           <div>
             <ATooltip text="Hello!" placement="bottom-start" :delay="300">
