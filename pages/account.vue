@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div class="h-full">
+  <div class="grow h-full overflow-y-scroll">
 
   </div>
 </div>

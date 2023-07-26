@@ -69,20 +69,19 @@
         </div>
       </div>
       <div class="flex gap-2 items-center shrink-0 grow-0">
-        <ABtn icon="i-ph-plus" color="primary" :icon-only="smAndSmaller"
-          :class="{ 'rounded-[50%]': smAndSmaller, 'rounded-2xl': !smAndSmaller }">
-          {{ !smAndSmaller ? 'S\'abonner' : '' }}
+        <ABtn icon="i-ph-plus" color="primary" :icon-only="smAndSmaller" class="rounded-3xl">
+          {{ !smAndSmaller ? $t("S'abonner") : '' }}
         </ABtn>
       </div>
     </div>
     <ABtn icon="i-ph-share-network" color="primary" variant="light">
-      Partager
+      {{ $t('Partager') }}
     </ABtn>
     <ABtn icon="i-ph-hand-heart" color="primary" variant="light">
-      Intéressant
+      {{ $t('Intéressant') }}
     </ABtn>
     <ABtn icon="i-ph-note-pencil" color="primary" variant="light">
-      Commenter
+      {{ $t('Commenter') }}
     </ABtn>
     <!-- <ASelect v-model="selectedCritic" prepend-inner-icon="i-bx-heart" :options="critics" placeholder="Feedback"
       class="text-sm" /> -->
