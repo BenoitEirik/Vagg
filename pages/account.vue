@@ -7,7 +7,7 @@
       <h3 v-if="!mdAndSmaller">User Name</h3>
     </div>
     <div class="grow flex flex-col items-end">
-      <ATabs :key="idTabs" :tabs="tabs" v-model="selectedTab" vertical class="grow" />
+      <ATabs :key="idTabs" :tabs="tabs" v-model="selectedTab" @update:model-value="switchTab" vertical class="grow" />
     </div>
     <div class="grow-0 flex flex-col gap-2 items-stretch" :class="{ 'p-4': !mdAndSmaller, 'p-2': mdAndSmaller }">
       <div class="flex items-center gap-2">
@@ -22,7 +22,9 @@
   </div>
 
   <div class="grow h-full overflow-y-scroll">
-
+    <NuxtLayout name="account">
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </div>
 </template>
@@ -40,27 +42,27 @@ const tabs = computed(() => {
   let defaultTabs: Array<Tab> = [
     {
       title: 'Chaîne',
-      value: 'channel',
+      value: '/account',
       icon: 'i-ph-user-list'
     },
     {
       title: 'Ajouter',
-      value: 'add_video',
+      value: '/account/add-video',
       icon: 'i-ph-upload'
     },
     {
       title: 'Statistiques',
-      value: 'statistics',
+      value: '/account/statistics',
       icon: 'i-ph-presentation-chart'
     },
     {
       title: 'Support',
-      value: 'support',
+      value: '/account/support',
       icon: 'i-ph-circle-wavy-question'
     },
     {
-      title: 'Paramètre',
-      value: 'settings',
+      title: 'Paramètres',
+      value: '/account/settings',
       icon: 'i-ph-gear'
     }
   ]
@@ -73,6 +75,10 @@ const tabs = computed(() => {
     return defaultTabs
   })()
 })
+
+const switchTab = (selectedTab: string) => {
+  navigateTo({ path: selectedTab })
+}
 </script>
 
 <style lang="scss">
