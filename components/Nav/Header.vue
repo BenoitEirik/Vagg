@@ -2,7 +2,7 @@
 <div class="z-50 top-0 sticky h-[60px] flex items-stretch border-b" style="backdrop-filter: blur(10px);">
   <div class="px-4 flex items-center gap-4" :class="{ 'basis-6/12': !mdAndSmaller }">
     <img src="/android-chrome-512x512.png" class="w-10">
-    <NuxtLink to="/" class="vagg-logo text-xl">{{ $t('Vagg') }}</NuxtLink>
+    <NuxtLink to="/" class="vagg-logo text-xl">{{ $t('title') }}</NuxtLink>
   </div>
 
   <div class="relative flex items-center"

@@ -1,8 +1,9 @@
 <template>
 <div>
-  <h2>Dashboard</h2>
+  <h2>Chaîne</h2>
 </div>
 </template>
-
+  
 <script setup lang="ts">
 </script>
+  

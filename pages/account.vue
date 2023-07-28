@@ -12,11 +12,11 @@
     <div class="grow-0 flex flex-col gap-2 items-stretch" :class="{ 'p-4': !mdAndSmaller, 'p-2': mdAndSmaller }">
       <div class="flex items-center gap-2">
         <ABtn icon="i-ph-arrow-u-down-left" variant="light" icon-only />
-        <span v-if="!mdAndSmaller">{{ $t('Quitter') }}</span>
+        <span v-if="!mdAndSmaller">{{ $t('quit') }}</span>
       </div>
       <div class="flex items-center gap-2">
         <ABtn icon="i-ph-sign-out" variant="light" icon-only />
-        <span v-if="!mdAndSmaller">{{ $t('Déconnexion') }}</span>
+        <span v-if="!mdAndSmaller">{{ $t('logout') }}</span>
       </div>
     </div>
   </div>
@@ -37,31 +37,37 @@ const bk = useBreakpoints(breakpointsTailwind)
 const mdAndSmaller = bk.smallerOrEqual('md')
 const selectedTab = ref<string>()
 const idTabs = ref<number>(0)
+const { t } = useI18n()
 
 const tabs = computed(() => {
   let defaultTabs: Array<Tab> = [
     {
-      title: 'Chaîne',
+      title: t('tab_dashboard'),
       value: '/account',
+      icon: 'i-ph-chalkboard-simple'
+    },
+    {
+      title: t('tab_channel'),
+      value: '/account/channel',
       icon: 'i-ph-user-list'
     },
     {
-      title: 'Ajouter',
+      title: t('tab_add_video'),
       value: '/account/add-video',
       icon: 'i-ph-upload'
     },
     {
-      title: 'Statistiques',
+      title: t('tab_statistics'),
       value: '/account/statistics',
       icon: 'i-ph-presentation-chart'
     },
     {
-      title: 'Support',
+      title: t('tab_support'),
       value: '/account/support',
       icon: 'i-ph-circle-wavy-question'
     },
     {
-      title: 'Paramètres',
+      title: t('tab_settings'),
       value: '/account/settings',
       icon: 'i-ph-gear'
     }
@@ -76,8 +82,8 @@ const tabs = computed(() => {
   })()
 })
 
-const switchTab = (selectedTab: string) => {
-  navigateTo({ path: selectedTab })
+const switchTab = async (selectedTab: string) => {
+  await navigateTo({ path: useNuxtApp().$localePath(selectedTab) })
 }
 </script>
 
